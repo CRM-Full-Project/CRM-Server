@@ -1,8 +1,11 @@
-var express = require('express');
-var app = express();
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+import { createServer } from 'node:http';
+const hostname = '127.0.0.1';
+const port = 3000;
+const server = createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
 });
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
