@@ -12,7 +12,7 @@ app.set('view engine', 'ejs')
 
 // Router app.Method(PATH, HANDLER)
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World! Yeah')
 })
 
 app.get('/views', (req, res) => {
